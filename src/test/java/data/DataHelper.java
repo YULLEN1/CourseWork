@@ -11,6 +11,32 @@ public class DataHelper {
     private static final Faker faker = new Faker(Locale.ENGLISH);
     private static final Faker fakerWithCyrillicLocale = new Faker(new Locale("ru", "RU"));
 
+    public static CardData getValidApprovedCard() {
+        return new CardData(getNumberByStatus("approved"), generateMonth(1), generateYear(2),
+                generateValidHolder(), generateValidCVC());
+    }
+
+    public static CardData getValidDeclinedCard() {
+        return new CardData(getNumberByStatus("declined"), generateMonth(1), generateYear(2),
+                generateValidHolder(), generateValidCVC());
+    }
+
+    public static String generateMonth(int shiftMonth) {
+        return LocalDate.now().plusMonths(shiftMonth).format(DateTimeFormatter.ofPattern("MM"));
+    }
+
+    public static String generateYear(int shiftYear) {
+        return LocalDate.now().plusYears(shiftYear).format(DateTimeFormatter.ofPattern("yy"));
+    }
+
+    public static String generateValidCVC() {
+        return faker.numerify("###");
+    }
+
+    public static String generateValidHolder() {
+        return faker.name().fullName().toUpperCase();
+    }
+
     @Value
     public static class CardData {
         private final String number;
@@ -29,36 +55,12 @@ public class DataHelper {
         return null;
     }
 
-}
+   // public static String generateHolderOf2Letters() {
 
-public static CardData getValidApprovedCard() {
-    return new CardData(getNumberByStatus("approved"), generateMonth(1), generateYear(2),
-            generateValidHolder(), generateValidCVC());
-}
+    //}
 
-public static CardData getValidDeclinedCard() {
-    return new CardData(getNumberByStatus("declined"), generateMonth(1), generateYear(2),
-            generateValidHolder(), generateValidCVC());
-}
 
-public static String generateMonth(int shiftMonth) {
-    return LocalDate.now().plusMonths(shiftMonth).format(DateTimeFormatter.ofPattern("MM"));
-}
 
-public static String generateYear(int shiftYear) {
-    return LocalDate.now().plusYears(shiftYear).format(DateTimeFormatter.ofPattern("yy"));
-}
+    }
 
-public static String generateValidCVC() {
-    return faker.numerify("###");
-}
-
-public static String generateValidHolder() {
-    return faker.name().fullName().toUpperCase();
-}
-
-public static String generateHolderOf2Letters() {
-    return "AT NL";
-}
-}
 
