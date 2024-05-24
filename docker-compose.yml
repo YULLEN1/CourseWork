@@ -1,0 +1,11 @@
+services:
+  mysql:
+    image: mysql:8.0.34
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=pass
