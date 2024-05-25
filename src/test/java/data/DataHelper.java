@@ -55,12 +55,47 @@ public class DataHelper {
         return null;
     }
 
-   // public static String generateHolderOf2Letters() {
+    public static String generateHolderOf2Letters() {
+        return faker.letterify("## ##", true);
+    }
 
-    //}
+    public static String generateHolderOf26Letters() {
+        return faker.letterify("############## #############", true);
+    }
 
+    public static String generateHolderOf25Letters() {
+        return faker.letterify("############# #############", true);
+    }
 
+    public static String generateCardNumberIsNull() {
+        return "0000 0000 0000 0000";
+    }
+
+    public static String generateRandomCardNumber() {
+        return faker.numerify("#### #### #### ####");
+    }
+
+    public static String generateCardNumberIsOf15Digit() {
+        return faker.numerify("#### #### #### ###");
 
     }
+
+    public static String generateCardNumberIsOf17Digit() {
+        return faker.numerify("#### #### #### #### #");
+    }
+
+    public static String generateMonthLessThanCurrent(int shiftMonth) {
+        return LocalDate.now().minusMonths(shiftMonth).format(DateTimeFormatter.ofPattern("MM"));
+    }
+
+    public static String generateYearLessThanCurrent(int shiftYear) {
+        return LocalDate.now().minusYears(shiftYear).format(DateTimeFormatter.ofPattern("yy"));
+    }
+
+    }
+
+
+
+
 
 
