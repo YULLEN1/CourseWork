@@ -16,7 +16,7 @@ public class PaymentPage {
     private SelenideElement cardNumber = $(byText("Номер карты")).parent().$(".input__control");
     private SelenideElement month = $(byText("Месяц")).parent().$(".input__control");
     private SelenideElement year = $(byText("Год")).parent().$(".input__control");
-    private SelenideElement owner = $(byText("Владелец")).parent().$(".input__control");
+    private SelenideElement holder = $(byText("Владелец")).parent().$(".input__control");
     private SelenideElement cvc = $(byText("CVC/CVV")).parent().$(".input__control");
     private SelenideElement continueButton = $(byText("Продолжить"));
     private SelenideElement cardNumberError = $(byText("Номер карты")).parent().$(".input__sub");
@@ -30,7 +30,7 @@ public class PaymentPage {
         cardNumber.setValue(cardData.getNumber());
         month.setValue(cardData.getMonth());
         year.setValue(cardData.getYear());
-        owner.setValue(cardData.getHolder());
+        holder.setValue(cardData.getHolder());
         cvc.setValue(cardData.getCvc());
         continueButton.click();
     }

@@ -20,7 +20,7 @@ public class SQLHelper {
     @SneakyThrows
     public static void setup() {
         runner = new QueryRunner();
-        conn = DriverManager.getConnection(System.getProperty("dbUrl"), "app", "pass");
+        conn = DriverManager.getConnection(System.getProperty("db.url"), "app", "pass");
     }
 
     @SneakyThrows

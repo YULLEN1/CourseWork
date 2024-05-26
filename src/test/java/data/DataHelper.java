@@ -6,6 +6,7 @@ import lombok.Value;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
+import java.util.Random;
 
 public class DataHelper {
     private static final Faker faker = new Faker(Locale.ENGLISH);
@@ -56,15 +57,15 @@ public class DataHelper {
     }
 
     public static String generateHolderOf2Letters() {
-        return faker.letterify("## ##", true);
+        return faker.letterify("?? ??").toUpperCase();
     }
 
     public static String generateHolderOf26Letters() {
-        return faker.letterify("############## #############", true);
+        return faker.letterify("????????????? ?????????????").toUpperCase();
     }
 
     public static String generateHolderOf25Letters() {
-        return faker.letterify("############# #############", true);
+        return faker.letterify("????????????? ????????????").toUpperCase();
     }
 
     public static String generateCardNumberIsNull() {
@@ -92,7 +93,85 @@ public class DataHelper {
         return LocalDate.now().minusYears(shiftYear).format(DateTimeFormatter.ofPattern("yy"));
     }
 
+    public static String generateSymbols(int length) {
+        Random random = new Random();
+        String chars = "!@#$%^&*()_+|-=:;'<>~`'";
+        StringBuilder sb = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            sb.append(chars.charAt(random.nextInt(chars.length())));
+        }
+        return sb.toString();
     }
+
+    public static String generateMonthOfLatin() {
+        return faker.letterify("??").toUpperCase();
+    }
+
+    public static String generateMonthOfCyrillic() {
+        return fakerWithCyrillicLocale.letterify("??").toUpperCase();
+    }
+
+    public static String generateYearOfLatin() {
+        return faker.letterify("??").toUpperCase();
+    }
+
+    public static String generateYearOfCyrillic() {
+        return fakerWithCyrillicLocale.letterify("??").toUpperCase();
+    }
+
+    public static String generateHolderCyrillic() {
+        return fakerWithCyrillicLocale.name().fullName().toUpperCase();
+    }
+
+    public static String generateHolderOfDigits() {
+        return faker.numerify("##### #####");
+    }
+
+    public static String generateHolderOfSymbols() {
+        return generateSymbols(5) + " " + generateSymbols(5);
+    }
+
+    public static String generateHolderWithoutSurname() {
+        return faker.name().firstName().toUpperCase();
+    }
+    public static String generateHolderWithNameCyrillic() {
+        return fakerWithCyrillicLocale.name().firstName().toUpperCase() + " " + faker.name().lastName().toUpperCase();}
+
+    public static String generateHolderWithSurnameIsCyrillic() {
+        return faker.name().firstName().toUpperCase() + " " + fakerWithCyrillicLocale.name().lastName().toUpperCase();}
+
+    public static String generateHolderWithHyphen() {
+        return faker.name().firstName().toUpperCase() +  " - " + faker.name().firstName().toUpperCase() + " " + faker.name().lastName().toUpperCase();}
+
+    public static String generateHolderofOneLetter() {
+        return faker.letterify("?").toUpperCase();
+    }
+
+    public static String generateHolderOf27Letters() {
+        return faker.letterify("????????????? ??????????????").toUpperCase();
+    }
+
+    public static String generateCVCCyrillic() {
+        return fakerWithCyrillicLocale.letterify("???");
+    }
+    public static String generateCVCLatin() {
+        return faker.letterify("???");
+    }
+
+    public static String generateCVC2Digits() {
+        return faker.numerify("##");
+
+    }
+
+    public static String generateCVC4Digits() {
+        return faker.numerify("####");
+    }
+
+    }
+
+
+
+
 
 
 
