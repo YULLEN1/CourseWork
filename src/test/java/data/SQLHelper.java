@@ -26,12 +26,10 @@ public class SQLHelper {
     @SneakyThrows
     public static void setDown() {
         setup();
-        var sqlUpdateOne = "DELETE FROM credit_request_entity;";
-        var sqlUpdateTwo = "DELETE FROM payment_entity;";
-        var sqlUpdateThree = "DELETE FROM order_entity;";
+        var sqlUpdateOne = "DELETE FROM payment_entity;";
+        var sqlUpdateTwo = "DELETE FROM order_entity;";
         runner.update(conn, sqlUpdateOne);
         runner.update(conn, sqlUpdateTwo);
-        runner.update(conn, sqlUpdateThree);
     }
 
     @Data

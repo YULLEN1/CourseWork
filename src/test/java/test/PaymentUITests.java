@@ -73,8 +73,8 @@ class PaymentUiTests {
 
         payments = SQLHelper.getPayments();
         orders = SQLHelper.getOrders();
-        assertEquals(0, payments.size());
-        assertEquals(0, orders.size());
+        assertEquals(1, payments.size());
+        assertEquals(1, orders.size());
         assertTrue(payments.get(0).getStatus().equalsIgnoreCase("declined"));
         assertEquals(payments.get(0).getTransaction_id(), orders.get(0).getPayment_id());
     }
