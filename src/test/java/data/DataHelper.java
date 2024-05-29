@@ -82,7 +82,7 @@ public class DataHelper {
     }
 
     public static String generateCardNumberIsOf17Digit() {
-        return faker.numerify("#### #### #### #### #");
+        return faker.numerify("1111 2222 3333 4444 #");
     }
 
     public static String generateMonthLessThanCurrent(int shiftMonth) {

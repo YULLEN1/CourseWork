@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static data.DataHelper.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-class PaymentUiTests {
+public class PaymentUiTests {
     private static DataHelper.CardData cardData;
     private static MainPage mainPage;
     private static PaymentPage paymentPage;
@@ -25,7 +25,6 @@ class PaymentUiTests {
 
     @BeforeAll
     static void setUpAll() {
-        SQLHelper.setDown();
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
@@ -40,7 +39,7 @@ class PaymentUiTests {
         mainPage = new MainPage();
     }
 
-    @AfterEach
+    @BeforeEach
     public void setDown() {
         SQLHelper.setDown();
     }
@@ -117,7 +116,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(generateCardNumberIsNull(), generateMonth(7), generateYear(2), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.cardNumberErrorVisible();
+        paymentPage.cardNumberErrorVisible("Неверный формат");
     }
 
     @Test
@@ -126,7 +125,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData("", generateMonth(7), generateYear(2), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.cardNumberErrorVisible();
+        paymentPage.cardNumberErrorVisible("Неверный формат");
     }
 
     @Test
@@ -144,7 +143,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(generateCardNumberIsOf15Digit(), generateMonth(7), generateYear(2), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.cardNumberErrorVisible();
+        paymentPage.cardNumberErrorVisible("Неверный формат");
     }
 
     @Test
@@ -153,7 +152,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(generateCardNumberIsOf17Digit(), generateMonth(7), generateYear(2), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.cardNumberErrorVisible();
+        paymentPage.successfulPayment();
     }
 
     @Test
@@ -162,7 +161,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonthLessThanCurrent(4), generateYear(0), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.monthErrorVisible();
+        paymentPage.monthErrorVisible("Неверно указан срок действия карты");
     }
 
     @Test
@@ -171,7 +170,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateSymbols(2), generateYear(2), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.monthErrorVisible();
+        paymentPage.monthErrorVisible("Неверный формат");
     }
 
     @Test
@@ -180,7 +179,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonthOfLatin(), generateYear(2), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.monthErrorVisible();
+        paymentPage.monthErrorVisible("Неверный формат");
     }
 
     @Test
@@ -189,7 +188,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonthOfCyrillic(), generateYear(2), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.monthErrorVisible();
+        paymentPage.monthErrorVisible("Неверный формат");
     }
 
     @Test
@@ -198,7 +197,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), "00", generateYear(2), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.monthErrorVisible();
+        paymentPage.monthErrorVisible("Неверный формат");
     }
 
     @Test
@@ -207,7 +206,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), "13", generateYear(2), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.monthErrorVisible();
+        paymentPage.monthErrorVisible("Неверно указан срок действия карты");
     }
 
     @Test
@@ -216,7 +215,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), "", generateYear(2), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.monthErrorVisible();
+        paymentPage.monthErrorVisible("Неверный формат");
     }
 
     @Test
@@ -225,7 +224,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYearLessThanCurrent(2), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.yearErrorVisible();
+        paymentPage.yearErrorVisible("Истёк срок действия карты");
     }
 
     @Test
@@ -234,7 +233,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateSymbols(2), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.yearErrorVisible();
+        paymentPage.yearErrorVisible("Неверный формат");
     }
 
     @Test
@@ -243,7 +242,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYearOfLatin(), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.yearErrorVisible();
+        paymentPage.yearErrorVisible("Неверный формат");
     }
 
     @Test
@@ -252,7 +251,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYearOfCyrillic(), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.yearErrorVisible();
+        paymentPage.yearErrorVisible("Неверный формат");
     }
 
     @Test
@@ -261,7 +260,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), "00", generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.yearErrorVisible();
+        paymentPage.yearErrorVisible("Истёк срок действия карты");
     }
 
     @Test
@@ -270,7 +269,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), "", generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.yearErrorVisible();
+        paymentPage.yearErrorVisible("Неверный формат");
     }
     @Test
     @DisplayName("24. Should decline if name and surname of holder consist of cyrillic letters")
@@ -278,8 +277,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateHolderCyrillic(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.yearErrorVisible();
-        paymentPage.holderErrorVisible();
+        paymentPage.holderErrorVisible("Неверный формат");
     }
 
     @Test
@@ -288,7 +286,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateHolderOfDigits(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.holderErrorVisible();
+        paymentPage.holderErrorVisible("Неверный формат");
     }
 
     @Test
@@ -297,7 +295,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateHolderOfSymbols(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.holderErrorVisible();
+        paymentPage.holderErrorVisible("Неверный формат");
     }
 
     @Test
@@ -306,7 +304,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateHolderWithoutSurname(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.holderErrorVisible();
+        paymentPage.holderErrorVisible("Неверный формат");
     }
 
     @Test
@@ -315,7 +313,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateHolderWithNameCyrillic(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.holderErrorVisible();
+        paymentPage.holderErrorVisible("Неверный формат");
     }
 
     @Test
@@ -324,7 +322,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateHolderWithSurnameIsCyrillic(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.holderErrorVisible();
+        paymentPage.holderErrorVisible("Неверный формат");
     }
 
     @Test
@@ -333,7 +331,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2),"", generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.holderErrorVisible();
+        paymentPage.holderErrorVisible("Поле обязательно для заполнения");
     }
 
     @Test
@@ -342,7 +340,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateHolderWithHyphen(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.holderErrorVisible();
+        paymentPage.holderErrorVisible("Неверный формат");
     }
 
     @Test
@@ -351,7 +349,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateHolderofOneLetter(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.holderErrorVisible();
+        paymentPage.holderErrorVisible("Неверный формат");
     }
 
     @Test
@@ -360,7 +358,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateHolderOf27Letters(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.holderErrorVisible();
+        paymentPage.holderErrorVisible("Неверный формат");
     }
 
     @Test
@@ -369,7 +367,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateValidHolder(), "000");
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.cvcErrorVisible();
+        paymentPage.cvcErrorVisible("Неверный формат");
     }
 
     @Test
@@ -378,7 +376,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateValidHolder(), generateSymbols(3));
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.cvcErrorVisible();
+        paymentPage.cvcErrorVisible("Неверный формат");
     }
 
     @Test
@@ -387,7 +385,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateValidHolder(), generateCVCCyrillic());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.cvcErrorVisible();
+        paymentPage.cvcErrorVisible("Неверный формат");
     }
 
     @Test
@@ -396,7 +394,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateValidHolder(), generateCVCLatin());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.cvcErrorVisible();
+        paymentPage.cvcErrorVisible("Неверный формат");
     }
 
     @Test
@@ -405,7 +403,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateValidHolder(), generateCVC2Digits());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.cvcErrorVisible();
+        paymentPage.cvcErrorVisible("Неверный формат");
     }
 
     @Test
@@ -414,7 +412,7 @@ class PaymentUiTests {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), generateMonth(7), generateYear(2), generateValidHolder(), generateCVC2Digits());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
-        paymentPage.cvcErrorVisible();
+        paymentPage.cvcErrorVisible("Неверный формат");
     }
 
 

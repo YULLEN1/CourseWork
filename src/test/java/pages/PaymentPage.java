@@ -10,6 +10,8 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byCssSelector;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
+import static groovy.xml.dom.DOMCategory.parent;
 
 public class PaymentPage {
 
@@ -26,7 +28,7 @@ public class PaymentPage {
     private SelenideElement holderError = $(byText("Владелец")).parent().$(".input__sub");
     private SelenideElement cvcError = $(byText("CVC/CVV")).parent().$(".input__sub");
 
-    public void fillForm (DataHelper.CardData cardData){
+    public void fillForm(DataHelper.CardData cardData) {
         cardNumber.setValue(cardData.getNumber());
         month.setValue(cardData.getMonth());
         year.setValue(cardData.getYear());
@@ -44,28 +46,28 @@ public class PaymentPage {
         cvcError.shouldBe(visible);
     }
 
-    public void cardNumberErrorVisible(){
-        cardNumberError.shouldBe(visible);
+    public void cardNumberErrorVisible(String expectedText) {
+        cardNumberError.shouldHave(Condition.exactText(expectedText)).shouldBe(visible);
     }
 
-    public void monthErrorVisible(){
-        monthError.shouldBe(visible);
+    public void monthErrorVisible(String expectedText) {
+        monthError.shouldHave(Condition.exactText(expectedText)).shouldBe(visible);
     }
 
-    public void yearErrorVisible(){
-        yearError.shouldBe(visible);
+    public void yearErrorVisible(String expectedText) {
+        yearError.shouldHave(Condition.exactText(expectedText)).shouldBe(visible);
     }
 
-    public void expiredCardErrorVisible() {
-        expiredCardError.shouldBe(visible);
+    public void expiredCardErrorVisible(String expectedText) {
+        expiredCardError.shouldHave(Condition.exactText(expectedText)).shouldBe(visible);
     }
 
-    public void holderErrorVisible(){
-        holderError.shouldBe(visible);
+    public void holderErrorVisible(String expectedText) {
+        holderError.shouldHave(Condition.exactText(expectedText)).shouldBe(visible);
     }
 
-    public void cvcErrorVisible(){
-        cvcError.shouldBe(visible);
+    public void cvcErrorVisible(String expectedText) {
+        cvcError.shouldHave(Condition.exactText(expectedText)).shouldBe(visible);
     }
 
     public void successfulPayment() {
@@ -73,7 +75,7 @@ public class PaymentPage {
     }
 
     public void declinedPayment() {
-        $(byCssSelector("div.notification.notification_status_error.notification_has-closer.notification_stick-to_right.notification_theme_alfa-on-white")).shouldBe(Condition.visible, Duration.ofSeconds(20));
+        $x("//div[contains(@class, 'notification_status_error')]").shouldBe(Condition.visible, Duration.ofSeconds(20));
     }
-
 }
+

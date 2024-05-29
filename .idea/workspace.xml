@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="24e7c166-a596-41bc-b054-f5e033688d4d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/Report.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/data/DataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/DataHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/PaymentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/PaymentPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/PaymentUITests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/PaymentUiTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="coursework" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="coursework" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/data/DataHelper.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2go9dNYMVWmCRLOneM1KRmwVYjH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yml.mysql: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Docker.docker.compose.yml: Compose Deployment.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.PaymentUiTests.executor": "Run",
+    "Gradle.PaymentUiTests.shouldBuyIfCardIsApproved.executor": "Run",
+    "Gradle.PaymentUiTests.shouldBuyIfNameAndSurnameOf25Letter.executor": "Run",
+    "Gradle.PaymentUiTests.shouldBuyIfNameAndSurnameOf26Letter.executor": "Run",
+    "Gradle.PaymentUiTests.shouldBuyIfNameAndSurnameOf2Letter.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIdYearIsEmpty.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfCVVIs3Nulls.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfCVVIsCyrillic.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfCVVIsLatin.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfCVVIsOf2Digits.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfCVVIsOf4Digits.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfCVVIsOfSymbols.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfCardNumberIsEmpty.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfCardNumberIsOf15Digit.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfCardNumberIsOf17Digit.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfCardNumberIsOfNulls.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfCardNumberIsRandom.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfDoubleNameWithHyphen.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfHolderIsCyrillic.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfHolderIsEmpty.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfHolderIsLatinWithoutSurname.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfHolderIsOfDigits.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfHolderIsOfSymbols.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfHolderNameIsCyrillic.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfMonthIs13l.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfMonthIsCyrillic.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfMonthIsEmpty.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfMonthIsLatin.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfMonthIsNull.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfMonthIsOfSymbols.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfMonthIsOutdated.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfNameAndSurnameOf27Letter.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfNameIsLatinAndSurnameIsCyrillic.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfOneLetterNameAndSurname.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfYearIsCyrillic.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfYearIsLatin.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfYearIsNull.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfYearIsOfSymbols.executor": "Run",
+    "Gradle.PaymentUiTests.shouldDeclineIfYearIsOutdated.executor": "Run",
+    "Gradle.PaymentUiTests.shouldPayByCardSuccessfully.executor": "Run",
+    "Gradle.PaymentUiTests.shouldRefuseIfCardIsDeclined.executor": "Run",
+    "Gradle.coursework.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/TrainingBBD2",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\coursework\docs" />
+      <recent name="C:\Users\User\IdeaProjects\coursework\src\test\java" />
+      <recent name="C:\Users\User\IdeaProjects\coursework\src\test\data" />
+      <recent name="C:\Users\User\IdeaProjects\coursework" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.PaymentUiTests">
+    <configuration name="PaymentUiTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;test.PaymentUiTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PaymentUiTests.shouldBuyIfCardIsApproved" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;test.PaymentUiTests.shouldBuyIfCardIsApproved&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PaymentUiTests.shouldDeclineIfCardNumberIsOf17Digit" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;test.PaymentUiTests.shouldDeclineIfCardNumberIsOf17Digit&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PaymentUiTests.shouldDeclineIfCardNumberIsRandom" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;test.PaymentUiTests.shouldDeclineIfCardNumberIsRandom&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PaymentUiTests.shouldRefuseIfCardIsDeclined" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;test.PaymentUiTests.shouldRefuseIfCardIsDeclined&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.PaymentUiTests" />
+        <item itemvalue="Gradle.PaymentUiTests.shouldDeclineIfCardNumberIsOf17Digit" />
+        <item itemvalue="Gradle.PaymentUiTests.shouldDeclineIfCardNumberIsRandom" />
+        <item itemvalue="Gradle.PaymentUiTests.shouldRefuseIfCardIsDeclined" />
+        <item itemvalue="Gradle.PaymentUiTests.shouldBuyIfCardIsApproved" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="24e7c166-a596-41bc-b054-f5e033688d4d" name="Changes" comment="" />
+      <created>1716353152412</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716353152412</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/test/PaymentUiTests.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/test/PaymentUiTests.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/test/PaymentUiTests.java</url>
+          <line>187</line>
+          <properties class="test.PaymentUiTests" method="shouldDeclineIfMonthIsCyrillic">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
