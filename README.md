@@ -67,5 +67,6 @@
 
 ### Документация
 1. [План автоматизации](https://github.com/yulialener/CourseWork/blob/2d8a5e4a361471084de476389a528800af11ff7e/docs/Plan.md)
-2. 
+2. [Отчёт по итогам тестирования](https://github.com/yulialener/CourseWork/blob/64509cd31591891f411a5dac0c9fc838e91bbf83/docs/Report.md)
+3. [Отчёт по итогам автоматизации](jetbrains://idea/navigate/reference?project=coursework&path=docs/Summary.md)
 
