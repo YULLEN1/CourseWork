@@ -202,7 +202,7 @@ public class PaymentUiTests {
 
     @Test
     @DisplayName("16. Should decline if month is 13")
-    void shouldDeclineIfMonthIs13l() {
+    void shouldDeclineIfMonthIs13() {
         val cardData = new DataHelper.CardData(getNumberByStatus("APPROVED"), "13", generateYear(2), generateValidHolder(), generateValidCVC());
         val paymentPage = mainPage.payByCard();
         paymentPage.fillForm(cardData);
