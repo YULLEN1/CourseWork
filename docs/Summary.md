@@ -7,7 +7,7 @@
 * написан необходимый для автоматизации тестовый фреймворк [page objects](https://github.com/yulialener/CourseWork/blob/64509cd31591891f411a5dac0c9fc838e91bbf83/src/test/java/pages) для взаимодействия с элементами веб-сервиса и [helpers](https://github.com/yulialener/CourseWork/blob/64509cd31591891f411a5dac0c9fc838e91bbf83/src/test/java/data) для управления тестовыми данными. При этом тестовые данные независимы от текущей даты и генерируются случайно для избежания эффекта пестицида.
 * автоматизированы все 39 заявленных в плане тестовых сценария.
 * составлен [отчет](https://github.com/yulialener/CourseWork/blob/64509cd31591891f411a5dac0c9fc838e91bbf83/docs/Report.md) по результату прогона тестов.
-* созданы 15 [issue](https://github.com/yulialener/CourseWork/issues) по найденным дефектам.
+* созданы 13 [issue](https://github.com/yulialener/CourseWork/issues) по найденным дефектам.
 
 ## Сработавшие риски
 * отсутствие технической документации не позволяло четко определить ожидаемый результат в тестах
