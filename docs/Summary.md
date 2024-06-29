@@ -3,7 +3,7 @@
 
 * проведено исследовательское тестирование функционала веб-сервиса покупки тура "Путешествие дня".
 * настроен удобный запуск SUT с быстрым подключением к БД MySQL.
-* составлен [план автоматизации](https://github.com/yulialener/CourseWork/blob/104a2a40359bdc98e34584be3ad431f828c7a132/docs/Plan.md), предусматривающий 39 тестовых сценария.
+* составлен [план автоматизации](https://github.com/YULLEN1/CourseWork/blob/main/docs/Plan.md), предусматривающий 39 тестовых сценария.
 * написан необходимый для автоматизации тестовый фреймворк [page objects](https://github.com/yulialener/CourseWork/blob/64509cd31591891f411a5dac0c9fc838e91bbf83/src/test/java/pages) для взаимодействия с элементами веб-сервиса и [helpers](https://github.com/yulialener/CourseWork/blob/64509cd31591891f411a5dac0c9fc838e91bbf83/src/test/java/data) для управления тестовыми данными. При этом тестовые данные независимы от текущей даты и генерируются случайно для избежания эффекта пестицида.
 * автоматизированы все 39 заявленных в плане тестовых сценария.
 * составлен [отчет](https://github.com/yulialener/CourseWork/blob/64509cd31591891f411a5dac0c9fc838e91bbf83/docs/Report.md) по результату прогона тестов.
