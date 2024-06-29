@@ -66,7 +66,7 @@
 Лицензия - свободная.
 
 ### Документация
-1. [План автоматизации](https://github.com/YULLEN1/CourseWork/blob/main/docs/Plan.md))
-2. [Отчёт по итогам тестирования](https://github.com/yulialener/CourseWork/blob/64509cd31591891f411a5dac0c9fc838e91bbf83/docs/Report.md)
+1. [План автоматизации](https://github.com/YULLEN1/CourseWork/blob/main/docs/Plan.md)
+2. [Отчёт по итогам тестирования](https://github.com/YULLEN1/CourseWork/blob/main/docs/Report.md)
 3. [Отчёт по итогам автоматизации](https://github.com/yulialener/CourseWork/blob/39cde0a35735484ff2782041cf08cc3ff39471f4/docs/Summary.md)
 
