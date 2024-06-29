@@ -68,5 +68,5 @@
 ### Документация
 1. [План автоматизации](https://github.com/YULLEN1/CourseWork/blob/main/docs/Plan.md)
 2. [Отчёт по итогам тестирования](https://github.com/YULLEN1/CourseWork/blob/main/docs/Report.md)
-3. [Отчёт по итогам автоматизации](https://github.com/yulialener/CourseWork/blob/39cde0a35735484ff2782041cf08cc3ff39471f4/docs/Summary.md)
+3. [Отчёт по итогам автоматизации](https://github.com/YULLEN1/CourseWork/blob/main/docs/Summary.md)
 
